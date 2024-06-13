@@ -67,19 +67,14 @@ body {
 
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   padding: 1rem;
   font-weight: 500;
   border-bottom: 1px solid var(--border-color);
 }
 
 .contact-info {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  align-items: center;
-  column-gap: 1rem;
-  flex: 1;
-  max-width: 765px;
+  display: none;
 }
 
 .contact-info i {
@@ -101,9 +96,8 @@ nav {
 }
 
 .nav-links {
-  display: flex;
-  align-items: center;
-  column-gap: 1.75rem;
+  /* TODO: Design the navbar */
+  display: none;
 }
 
 .nav-links li {
@@ -129,10 +123,7 @@ nav {
 }
 
 .search-icon {
-  margin: auto 2rem;
-  background-color: transparent;
-  border: none;
-  font-size: 1.1rem;
+  display: none;
 }
 
 .hero-content {
@@ -150,16 +141,17 @@ nav {
 }
 
 .hero-content h1 span:first-child {
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   font-weight: 400;
   border-left: 4px solid var(--primary-color);
   padding-left: 2rem;
 }
 
 .hero-content h1 span:last-child {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 700;
   margin-top: 0.5rem;
+  line-height: 1.1;
 }
 
 .download-btn {
@@ -208,6 +200,9 @@ nav {
 .service-categories .container {
   background: #f4f4f5;
   overflow: visible !important;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }
 
 .single-service-area {
@@ -264,13 +259,20 @@ nav {
   padding-bottom: 4rem;
 }
 
-.about-us-section .row {
-  column-gap: 2rem;
+.about-us-section .container {
+  display: grid;
+  gap: 4rem;
 }
 
 .about-us-img {
   position: relative;
   z-index: 1;
+  order: 1;
+  width: 100%;
+}
+
+.about-us-img img {
+  width: inherit;
 }
 
 .about-us-img .about-img-2 {
@@ -292,14 +294,18 @@ nav {
   font-weight: 700;
   letter-spacing: 0.25rem;
   border-left: 4px solid var(--primary-color);
-  padding-left: 4rem;
+  padding-left: 2rem;
 }
 
 .about-us-content h2 {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
   margin-top: 1rem;
   color: #1f2732;
+}
+
+.about-us-para {
+  gap: 1rem;
 }
 
 .about-us-para span {
@@ -320,7 +326,7 @@ nav {
 
 .about-menu {
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(1, auto);
   column-gap: 2rem;
   row-gap: 1rem;
 }
@@ -380,6 +386,7 @@ nav {
   align-items: center;
   text-align: center;
   gap: 4rem;
+  width: 100%;
 }
 
 .services-title-section::before {
@@ -402,27 +409,30 @@ nav {
 }
 
 .services-title-section h2 {
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  max-width: 32rem;
+  max-width: 42rem;
   text-transform: capitalize;
 }
 
 .services-cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
   cursor: pointer;
   margin-top: 4rem;
+  width: 100%;
 }
 
 .service-card {
   background: var(--card-background);
   padding: 2rem;
   display: flex;
+  flex-direction: column;
   gap: 3rem;
   transition-duration: 300ms;
+  width: 100%;
 }
 
 .card-icon-box {
@@ -433,8 +443,10 @@ nav {
   position: relative;
   background: var(--border-color);
   padding: 2rem;
-  height: 10rem;
+  width: 10rem;
+  height: auto;
   aspect-ratio: 1/1;
+  margin: auto;
   transition-duration: 700ms;
 }
 
@@ -489,7 +501,8 @@ nav {
 
 .portfolio-section .container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr);
   align-items: center;
 }
 
@@ -504,7 +517,7 @@ nav {
 }
 
 .portfolio-title h2 {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: #1f2732;
   text-transform: capitalize;
@@ -524,7 +537,7 @@ nav {
 .portfolio-cards {
   padding: 2rem 1rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
   max-width: 1480px;
   margin-left: auto;
@@ -592,8 +605,8 @@ nav {
 
 /* Project Section  */
 .project-section {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   position: relative;
   width: 100%;
   color: #f4f4f5;
@@ -629,7 +642,7 @@ nav {
 }
 
 .project-content h2 {
-  font-size: 3.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 1rem;
   text-transform: capitalize;
@@ -684,7 +697,7 @@ nav {
 }
 
 .team-section-title h2 {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: #1f2732;
   text-transform: capitalize;
@@ -739,41 +752,155 @@ nav {
 
 /* Mobile styles */
 @media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
+  .hero-content {
+    row-gap: 2rem;
   }
 
-  h1 {
-    font-size: 20px;
-  }
-
-  p {
-    font-size: 14px;
-  }
-
-  #hero .contact-info {
-    display: none;
+  .hero-content h1 {
+    row-gap: 2rem;
   }
 }
 
 /* Tablet styles */
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
-  #hero .contact-info {
-    display: none;
+  .about-menu {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .portfolio-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 }
 
 /* Desktop styles */
 @media only screen and (min-width: 1025px) {
-  body {
-    background-color: lightcoral;
+  /*=======================
+  HERO SECTION
+  =========================*/
+
+  header {
+    justify-content: space-between;
   }
 
-  h1 {
-    font-size: 40px;
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+    column-gap: 1rem;
+    flex: 1;
+    max-width: 765px;
   }
 
-  p {
-    font-size: 22px;
+  .nav-links {
+    display: flex;
+    align-items: center;
+    column-gap: 1.75rem;
+  }
+
+  .search-icon {
+    display: inline;
+    margin: auto 2rem;
+    background-color: transparent;
+    border: none;
+    font-size: 1.1rem;
+  }
+
+  .hero-content h1 span:first-child {
+    font-size: 1.75rem;
+  }
+
+  .hero-content h1 span:last-child {
+    font-size: 5rem;
+  }
+
+  /*------------------------
+   SERVICE-CATEGORIES 
+--------------------------*/
+  .service-categories .container {
+    flex-direction: row;
+  }
+
+  /*----------------------------------------
+   05. ABOUT-US css
+----------------------------------------*/
+  .about-us-section .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-us-img {
+    order: 0;
+  }
+
+  .about-us-title p {
+    padding-left: 4rem;
+  }
+
+  .about-us-title h2 {
+    font-size: 2.5rem;
+  }
+
+  .about-menu {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  /*----------------------------------------
+   06. SERVICES css
+----------------------------------------*/
+  .services-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-card {
+    flex-direction: row;
+  }
+
+  .services-title-section h2 {
+    font-size: 2.5rem;
+  }
+
+  .card-icon-box {
+    height: 10rem;
+    font-size: 4rem;
+    height: 10rem;
+    width: auto;
+  }
+
+  .card-icon-box span {
+    font-size: 4rem;
+  }
+
+  .card-icon-box i {
+    font-size: 1.75rem;
+  }
+
+  /*----------------------------------------
+   07. PORTFOLIO css
+----------------------------------------*/
+  .portfolio-section .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .project-section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  .project-content h2 {
+    font-size: 3.5rem;
+  }
+
+  /*----------------------------------------
+   08. TEAM SECTION css
+----------------------------------------*/
+
+  .team-section-title h2 {
+    font-size: 2.5rem;
   }
 }
