@@ -831,9 +831,11 @@ nav {
   color: var(--primary-color);
 }
 
-.counter-box > div {
+.counter-box > p {
   border-left: 4px solid var(--primary-color);
   padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .counter-box p {
