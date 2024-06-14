@@ -51,7 +51,7 @@ body {
       rgba(var(--bg-color-rgb), var(--bg-opacity)),
       rgba(var(--bg-color-rgb), var(--bg-opacity))
     ),
-    url("/images/background/meeting-594091_1280.jpg");
+    url("../images/background/meeting-594091_1280.jpg");
   bottom: 0;
   width: 0;
   height: 0;
