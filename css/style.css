@@ -289,21 +289,6 @@ nav {
   gap: 2rem;
 }
 
-.about-us-content .about-us-title p {
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.25rem;
-  border-left: 4px solid var(--primary-color);
-  padding-left: 2rem;
-}
-
-.about-us-content h2 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-top: 1rem;
-  color: #1f2732;
-}
-
 .about-us-para {
   gap: 1rem;
 }
@@ -385,7 +370,6 @@ nav {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 4rem;
   width: 100%;
 }
 
@@ -402,18 +386,9 @@ nav {
   transform: translate(-50%, -50%);
 }
 
-.services-title-section p {
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.25rem;
-}
-
-.services-title-section h2 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+.services-title-section .section-heading {
   max-width: 42rem;
-  text-transform: capitalize;
+  color: #f4f4f5;
 }
 
 .services-cards {
@@ -504,23 +479,6 @@ nav {
   gap: 2rem;
   grid-template-columns: repeat(1, 1fr);
   align-items: center;
-}
-
-.portfolio-title p {
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.25rem;
-  border-left: 4px solid var(--primary-color);
-  padding-left: 2rem;
-  color: #6a6a6a;
-  margin-bottom: 2rem;
-}
-
-.portfolio-title h2 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #1f2732;
-  text-transform: capitalize;
 }
 
 .portfolio-section .btn-primary {
@@ -686,22 +644,6 @@ nav {
   max-width: 32rem;
   margin: auto;
   text-align: center;
-  gap: 2rem;
-}
-
-.team-section-title p {
-  text-transform: uppercase;
-  font-weight: 600;
-  color: #6a6a6a;
-  letter-spacing: 0.25rem;
-}
-
-.team-section-title h2 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #1f2732;
-  text-transform: capitalize;
-  line-height: 1.1;
 }
 
 /* TEAM CARD  */
@@ -750,6 +692,154 @@ nav {
   letter-spacing: 0.25rem;
 }
 
+/*----------------------------------------
+   09. VIDEO SECTION css
+----------------------------------------*/
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: max-content;
+  margin-bottom: 10rem;
+}
+
+.video-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: inherit;
+  z-index: -1;
+  --bg-opacity: 0.3;
+  background: linear-gradient(
+      rgba(var(--bg-color-rgb), var(--bg-opacity)),
+      rgba(var(--bg-color-rgb), var(--bg-opacity))
+    ),
+    url("../images/background/virtual-3460451_1280.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.video-section .container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+  min-height: max-content;
+  position: relative;
+  z-index: 10;
+}
+
+.video-play-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7rem;
+  aspect-ratio: 1/1;
+  background: transparent;
+  border-radius: 50%;
+  color: #cd0052;
+  font-size: 2rem;
+  cursor: pointer;
+  border: 1px solid #f4f4f5;
+  cursor: pointer;
+  animation: shadow-pulse 2s infinite;
+  margin: 4rem auto;
+}
+
+.video-play-btn:hover {
+  animation-play-state: paused;
+}
+
+@keyframes shadow-pulse {
+  0% {
+    box-shadow: 0 0 0px 0px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.video-section-card {
+  background: var(--card-background);
+  padding: 2rem;
+  max-width: 28rem;
+  color: #f4f4f5;
+}
+
+.video-section-card h2 {
+  color: #f4f4f5;
+}
+
+.video-section-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  bottom: -10rem;
+}
+
+.video-section-title::before {
+  content: "video";
+  position: absolute;
+  font-size: 6rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.1);
+  z-index: +1;
+  font-family: "Dancing Script", cursive;
+}
+
+/* --------------------------------
+    COMPANY FACT SECTION css
+--------------------------------- */
+.company-fact-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  position: relative;
+  width: 100%;
+}
+
+.company-fact-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.counter-boxes {
+  margin: 2rem 0;
+  display: grid;
+  color: #1f2732;
+}
+
+.counter-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.counter-box i {
+  font-size: 3rem;
+  color: var(--primary-color);
+}
+
+.counter-box > div {
+  border-left: 4px solid var(--primary-color);
+  padding-left: 2rem;
+}
+
+.counter-box p {
+  color: #6a6a6a;
+}
+
 /* Mobile styles */
 @media only screen and (max-width: 600px) {
   .hero-content {
@@ -774,6 +864,10 @@ nav {
   .project-section {
     padding-top: 6rem;
     padding-bottom: 6rem;
+  }
+
+  .counter-boxes {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -836,14 +930,6 @@ nav {
     order: 0;
   }
 
-  .about-us-title p {
-    padding-left: 4rem;
-  }
-
-  .about-us-title h2 {
-    font-size: 2.5rem;
-  }
-
   .about-menu {
     grid-template-columns: repeat(2, auto);
   }
@@ -857,10 +943,6 @@ nav {
 
   .service-card {
     flex-direction: row;
-  }
-
-  .services-title-section h2 {
-    font-size: 2.5rem;
   }
 
   .card-icon-box {
@@ -897,10 +979,26 @@ nav {
   }
 
   /*----------------------------------------
-   08. TEAM SECTION css
+   09. VIDEO SECTION css
 ----------------------------------------*/
+  .video-section .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-  .team-section-title h2 {
-    font-size: 2.5rem;
+  .video-section-title {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-size: 2.25rem;
+  }
+
+  .video-section-title::before {
+    font-size: 8rem;
+  }
+
+  /*----------------------------------------
+   10. COMPANY FACT SECTION css
+----------------------------------------*/
+  .counter-boxes {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
