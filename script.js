@@ -1,3 +1,10 @@
+const menuIcon = document.getElementById("menu-icon");
+const navbar = document.getElementById("navbar");
+
+menuIcon.addEventListener("click", () => {
+  navbar.classList.toggle("show-menu");
+});
+
 const counterAnimation = (elem) => {
   let start = 0;
   const targetNumber = parseInt(elem.innerText);

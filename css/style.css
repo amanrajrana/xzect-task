@@ -95,9 +95,18 @@ nav {
   padding: 1rem 0;
 }
 
-.nav-links {
-  /* TODO: Design the navbar */
-  display: none;
+.menu-icon {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.menu-container {
+  position: relative;
+}
+
+.show-menu {
+  display: flex !important;
 }
 
 .nav-links li {
@@ -1227,10 +1236,40 @@ footer .btn-primary {
   .hero-content h1 {
     row-gap: 2rem;
   }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+    position: absolute;
+    background: #07017a;
+    padding: 2rem 1rem;
+    right: 0;
+    top: 2.5rem;
+    max-width: 95vw;
+    width: 18rem;
+    overflow: hidden;
+  }
 }
 
 /* Tablet styles */
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+    position: absolute;
+    background: #07017a;
+    padding: 2rem 1rem;
+    right: 0;
+    top: 2.5rem;
+    max-width: 95vw;
+    width: 18rem;
+    overflow: hidden;
+  }
+
   .about-menu {
     grid-template-columns: repeat(2, auto);
   }
@@ -1276,6 +1315,10 @@ footer .btn-primary {
     display: flex;
     align-items: center;
     column-gap: 1.75rem;
+  }
+
+  .menu-icon {
+    display: none;
   }
 
   .search-icon {
