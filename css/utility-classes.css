@@ -100,7 +100,7 @@
 .bg-heading::before {
   content: "";
   position: absolute;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.1);
   z-index: -1;
@@ -153,5 +153,9 @@
 
   .section-heading {
     font-size: 2.25rem;
+  }
+
+  .bg-heading::before {
+    font-size: 5rem;
   }
 }

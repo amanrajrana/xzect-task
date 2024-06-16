@@ -597,7 +597,7 @@ nav {
 .project-section .container::before {
   content: "projects";
   position: absolute;
-  font-size: 8rem;
+  font-size: 4rem;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.1);
   z-index: -1;
@@ -906,7 +906,6 @@ nav {
   grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
   margin-top: 4rem;
-  height: 43rem;
 }
 
 .single-pricing-card {
@@ -1119,9 +1118,11 @@ footer .bg-heading::before {
   border: 2px solid #0a00cd;
   padding: 1.5rem 2rem;
   color: #f4f4f5;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1rem;
+  gap: 0.5rem;
   align-items: center;
-  width: inherit;
+  width: 100%;
 }
 
 .footer-contact-us-form > div:hover {
@@ -1137,7 +1138,6 @@ footer .bg-heading::before {
   outline: none;
   border: none;
   color: #f4f4f5;
-  flex: 1;
   font-size: 1.25rem;
 }
 
@@ -1242,6 +1242,10 @@ footer .btn-primary {
   .project-section {
     padding-top: 6rem;
     padding-bottom: 6rem;
+  }
+
+  .project-section .container::before {
+    font-size: 6rem;
   }
 
   .counter-boxes {
@@ -1356,6 +1360,9 @@ footer .btn-primary {
     font-size: 3.5rem;
   }
 
+  .project-section .container::before {
+    font-size: 8rem;
+  }
   /*----------------------------------------
    09. VIDEO SECTION css
 ----------------------------------------*/
