@@ -81,6 +81,35 @@
   text-transform: capitalize;
 }
 
+.bg-heading {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.bg-heading h2 {
+  color: #f4f4f5;
+}
+
+.bg-heading::before {
+  content: "";
+  position: absolute;
+  font-size: 5rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.1);
+  z-index: -1;
+  font-family: "Dancing Script", cursive;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
