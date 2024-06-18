@@ -6,8 +6,8 @@
     <title>Livvic</title>
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/utility-classes.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/output.css" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico" />
@@ -27,91 +27,124 @@
     ></script>
   </head>
 
-  <body>
+  <body class="font-poppins">
     <!--======= HERO START ========-->
-    <div id="hero">
-      <header class="container row">
+    <div id="hero" class="text-white w-full relative pb-16">
+      <header
+        class="container flex justify-end lg:justify-between p-4 font-semibold border-b border-blue-700"
+      >
         <!-- CONTACT INFO -->
-        <div class="row contact-info">
+        <div
+          class="hidden lg:grid lg:grid-cols-[repeat(3,auto)] items-center gap-x-4 lg:flex-1 max-w-3xl justify-between"
+        >
           <div class="flex align-center">
-            <i class="fa-solid fa-phone-flip"></i>
+            <i class="fa-solid fa-phone-flip mr-3"></i>
             <span>+012 (345) 77 999</span>
           </div>
 
           <div class="container flex align-center">
-            <i class="fa-solid fa-location-dot"></i>
+            <i class="fa-solid fa-location-dot mr-3"></i>
             <span>55 New Sodor Road, USA</span>
           </div>
 
           <div class="container flex align-center">
-            <i class="fa-regular fa-clock"></i>
+            <i class="fa-regular fa-clock mr-3"></i>
             <span>Sun - Friday : 10 am - 08 pm</span>
           </div>
         </div>
+
         <!-- SOCIAL MEDIA ICONS -->
-        <div class="row social-icons">
+        <div class="flex social-icons items-center gap-x-5 w-max text-xl">
           <i class="fa-brands fa-facebook-f"></i>
           <i class="fa-brands fa-x-twitter"></i>
           <i class="fa-brands fa-instagram"></i>
         </div>
       </header>
 
-      <nav class="container row justify-between">
+      <nav class="container flex mt-4 p-4 justify-between">
         <!-- LOGO -->
-        <div class="logo">
-          <img
-            src="https://livvic-jekyll.tortoizthemes.com/assets/images/logo.png"
-            alt="Livvic"
-          />
-        </div>
+        <img
+          src="https://livvic-jekyll.tortoizthemes.com/assets/images/logo.png"
+          alt="Livvic"
+          class="w-40 h-12 object-contain"
+        />
         <!-- NAVIGATION -->
-        <div class="menu-container row align-center">
-          <button id="menu-icon" class="menu-icon">
+        <div class="relative flex items-center">
+          <button
+            id="menu-icon"
+            class="menu-icon bg-transparent border-none text-2xl lg:hidden"
+          >
             <i class="fa-solid fa-bars"></i>
           </button>
-          <ul id="navbar" class="nav-links">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">team</a></li>
-            <li><a href="#">price</a></li>
-            <li><a href="#">blog</a></li>
-            <li><a href="#">Contact</a></li>
+          <ul
+            id="navbar"
+            class="nav-links hidden flex-col gap-1 list-none absolute bg-blue-900 py-8 px-4 right-0 top-10 max-w-[95vw] w-72 overflow-hidden lg:bg-transparent lg:static lg:flex-row lg:max-w-max lg:w-auto lg:flex lg:items-center lg:gap-x-7 lg:list-disc"
+          >
+            <li class="pl-3 text-lg font-medium list-none">
+              <a href="#" class="text-primary duration-300">Home</a>
+            </li>
+
+            <li class="pl-3 text-lg font-medium">
+              <a href="#" class="duration-300 hover:text-primary">About</a>
+            </li>
+
+            <li class="pl-3 text-lg font-medium">
+              <a href="#" class="duration-300 hover:text-primary">Services</a>
+            </li>
+            <li class="pl-3 text-lg font-medium">
+              <a href="#" class="duration-300 hover:text-primary">Portfolio</a>
+            </li>
+            <li class="pl-3 text-lg font-medium">
+              <a href="#" class="duration-300 hover:text-primary">team</a>
+            </li>
+            <li class="pl-3 text-lg font-medium">
+              <a href="#" class="duration-300 hover:text-primary">price</a>
+            </li>
+            <li class="pl-3 text-lg font-medium">
+              <a href="#" class="duration-300 hover:text-primary">blog</a>
+            </li>
+            <li class="pl-3 text-lg font-medium">
+              <a href="#" class="duration-300 hover:text-primary">Contact</a>
+            </li>
           </ul>
 
-          <button class="search-icon">
+          <button
+            class="hidden lg:inline-block my-auto mx-8 bg-transparent text-lg duration-300 hover:text-primary"
+          >
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
       </nav>
 
       <!-- HERO content  -->
-      <div class="container hero-content">
-        <h1>
-          <span
-            >Start New Business <br />
-            With Our New Experience and</span
-          >
-          <span>Creative Minds</span>
+      <div
+        class="container flex flex-col justify-center gap-y-8 items-start min-h-[600px]"
+      >
+        <h1 class="flex flex-col gap-y-4">
+          <span class="text-xl pl-8 border-l-4 border-primary lg:text-2xl">
+            Start New Business <br />
+            With Our New Experience and
+          </span>
+          <span class="text-6xl font-bold mt-2 lg:text-7xl lg:mt-4">
+            Creative Minds
+          </span>
         </h1>
-        <ul
-          style="column-gap: 2rem; flex-wrap: wrap; margin-bottom: 1rem"
-          class="row"
-        >
+        <ul class="flex gap-x-8 flex-wrap mb-4 list-disc pl-4">
           <li>Design</li>
           <li>Marketing</li>
           <li>Development</li>
         </ul>
 
-        <div class="row">
+        <div class="flex">
           <button class="btn btn-primary">
             <span> Get Started </span>
             <span>
               <i class="fa-solid fa-arrow-right"></i>
             </span>
           </button>
-          <button class="btn btn-play">
+          <button
+            class="bg-blue-900 aspect-square flex justify-center items-center text-xl ml-5 py-6 px-8 rounded-full hover:bg-blue-950 duration-300"
+          >
             <i class="fa-solid fa-play"></i>
           </button>
         </div>
@@ -119,8 +152,10 @@
 
       <!-- Download button  -->
       <div class="container">
-        <div class="download-btn">
-          <i class="fa-solid fa-arrow-down"></i>
+        <div
+          class="w-20 h-24 flex justify-center items-center border-4 border-blue-700 rounded-3xl mx-auto relative download-btn cursor-pointer"
+        >
+          <i class="fa-solid fa-arrow-down text-3xl text-blue-700"></i>
         </div>
       </div>
     </div>
@@ -129,16 +164,22 @@
     <!--==================================
     SERVICE CATEGORIES START 
     ======================================-->
-    <section class="service-categories">
-      <div class="container">
+    <section class="py-24 bg-slate-100">
+      <div class="container flex flex-col lg:flex-row gap-4 gap-y-16">
         <div class="col-lg-4">
-          <div class="single-service-area">
-            <span class="service-num"> 0 1 </span>
+          <div class="relative z-10">
+            <span
+              class="absolute text-8xl z-[1] left-0 -top-6 font-medium text-slate-900 opacity-10"
+            >
+              0 1
+            </span>
           </div>
-          <div class="service-icon">
+          <div
+            class="float-left clear-both mr-2 relative z-[1] text-[2rem] text-primary"
+          >
             <i class="fa-solid fa-bullhorn"></i>
           </div>
-          <div class="service-content">
+          <div class="ml-32">
             <h4>Market Analysis</h4>
             <p></p>
             <p>
@@ -149,13 +190,19 @@
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="single-service-area">
-            <span class="service-num"> 0 2 </span>
+          <div class="relative z-10">
+            <span
+              class="absolute text-8xl z-[1] left-0 -top-6 font-medium text-slate-900 opacity-10"
+            >
+              0 2
+            </span>
           </div>
-          <div class="service-icon">
+          <div
+            class="float-left clear-both mr-2 relative z-[1] text-[2rem] text-primary"
+          >
             <i class="fa-solid fa-pen-nib"></i>
           </div>
-          <div class="service-content">
+          <div class="ml-32">
             <h4>Product Design</h4>
             <p></p>
             <p>
@@ -166,13 +213,19 @@
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="single-service-area">
-            <span class="service-num"> 0 3 </span>
+          <div class="relative z-10">
+            <span
+              class="absolute text-8xl z-[1] left-0 -top-6 font-medium text-slate-900 opacity-10"
+            >
+              0 3
+            </span>
           </div>
-          <div class="service-icon">
+          <div
+            class="float-left clear-both mr-2 relative z-[1] text-[2rem] text-primary"
+          >
             <i class="fa-solid fa-umbrella-beach"></i>
           </div>
-          <div class="service-content">
+          <div class="ml-32">
             <h4>UX/UI Strategy</h4>
             <p></p>
             <p>
@@ -189,52 +242,55 @@
     <!--==================================
     ABOUT US START
     ======================================-->
-    <section class="about-us-section">
-      <div class="container">
-        <div class="about-us-img">
+    <section class="about-us-section py-16">
+      <div class="container grid gap-16 lg:grid-cols-2">
+        <div class="relative z-10 w-full">
           <img
             src="https://livvic-jekyll.tortoizthemes.com/assets/images/about-us/1.png"
             alt=""
-            class="about-img-1"
+            class="w-[inherit]"
           />
           <img
             src="https://livvic-jekyll.tortoizthemes.com/assets/images/about-us/2.png"
             alt=""
-            class="about-img-2"
+            class="absolute top-0 left-0 -z-10 w-[inherit]"
           />
         </div>
-        <div class="about-us-content">
-          <div class="about-us-title">
+        <div class="flex flex-col gap-y-8 text-gray-500">
+          <div>
             <p class="section-title">About Us</p>
             <h2 class="section-heading">
               Most Creative Agency For Your Project
             </h2>
           </div>
-          <p class="about-us-para row">
-            <span>A</span>
+          <p class="about-us-para flex gap-4">
+            <span
+              class="flex justify-center items-center h-4 bg-primary rounded-lg font-bold aspect-square text-white text-4xl p-8"
+              >A</span
+            >
             Avoids pleasure itself, because it is pleasure, but because those
             who do not know how to pursue pleasure ration counter consequences
             that ares extremely painful. Nor again is tanjore who loves or
             pursues or desires to obtain pain
           </p>
-          <ul class="about-menu">
+          <ul class="about-menu font-medium grid lg:grid-cols-2 gap-y-4 w-max">
             <li>
-              <a href="#"><i class="fas fa-check"></i>Web Design</a>
+              <a href="#"><i class="fas fa-check mr-2"></i>Web Design</a>
             </li>
             <li>
-              <a href="#"><i class="fas fa-check"></i>Web Development</a>
+              <a href="#"><i class="fas fa-check mr-2"></i>Web Development</a>
             </li>
             <li>
-              <a href="#"><i class="fas fa-check"></i>Graphics Arts</a>
+              <a href="#"><i class="fas fa-check mr-2"></i>Graphics Arts</a>
             </li>
             <li>
-              <a href="#"><i class="fas fa-check"></i>Product Marketing</a>
+              <a href="#"><i class="fas fa-check mr-2"></i>Product Marketing</a>
             </li>
             <li>
-              <a href="#"><i class="fas fa-check"></i>User Research</a>
+              <a href="#"><i class="fas fa-check mr-2"></i>User Research</a>
             </li>
           </ul>
-          <button class="btn btn-primary">
+          <button class="btn btn-primary w-max">
             Contact Us <i class="fa fa-arrow-right"></i>
           </button>
         </div>
@@ -244,83 +300,107 @@
     <!--==================================
     OUR SERVICE START
     ======================================-->
-    <section class="services-section">
+    <section class="services-section relative text-white py-16">
       <div class="container">
-        <div class="bg-heading">
+        <div class="bg-heading before:content-['Services']">
           <p class="section-title">Our Services</p>
-          <h2 class="section-heading">
+          <h2 class="section-heading text-center max-w-[768px]">
             Some advantage from but who has any right to
           </h2>
         </div>
 
         <!-- cards -->
-        <div class="services-cards">
-          <div class="service-card">
-            <div class="card-icon-box">
-              <span>01</span>
-              <i class="fas fa-chart-line"></i>
+        <div class="grid lg:grid-cols-2 mt-16 gap-8">
+          <div
+            class="service-card lg:flex-row bg-blue-950 p-8 flex flex-col gap-12 duration-300 w-full"
+          >
+            <div
+              class="card-icon-box flex justify-center items-center rounded-full relative bg-blue-800 p-8 w-40 aspect-square m-auto duration-700"
+            >
+              <span class="text-7xl text-blue-950">01</span>
+              <i
+                class="bg-white p-6 text-primary rounded-full text-3xl absolute top-[60%] left-[60%] w-max aspect-square fas fa-chart-line"
+              ></i>
             </div>
-            <div class="service-card-content">
-              <h3>Market Analysis</h3>
+            <div class="flex flex-col gap-4">
+              <h3 class="text-xl font-bold">Market Analysis</h3>
               <p>
                 nventore veritatis et quasi beata vitae dicta sunt explicabo.
                 Neenms ipsam voluptatem voluptas
               </p>
-              <a class="btn" href="#">
+              <a class="btn flex p-0 items-center" href="#">
                 <span>Read More</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
           </div>
 
-          <div class="service-card">
-            <div class="card-icon-box">
-              <span>02</span>
-              <i class="fas fa-bezier-curve"></i>
+          <div
+            class="service-card lg:flex-row bg-blue-950 p-8 flex flex-col gap-12 duration-300 w-full"
+          >
+            <div
+              class="card-icon-box flex justify-center items-center rounded-full relative bg-blue-800 p-8 w-40 aspect-square m-auto duration-700"
+            >
+              <span class="text-7xl text-blue-950">02</span>
+              <i
+                class="bg-white p-6 text-primary rounded-full text-3xl absolute top-[60%] left-[60%] w-max aspect-square fas fa-chart-line"
+              ></i>
             </div>
-            <div class="service-card-content">
-              <h3>Market Analysis</h3>
+            <div class="flex flex-col gap-4">
+              <h3 class="text-xl font-bold">Market Analysis</h3>
               <p>
                 nventore veritatis et quasi beata vitae dicta sunt explicabo.
                 Neenms ipsam voluptatem voluptas
               </p>
-              <a class="btn" href="#">
+              <a class="btn flex p-0 items-center" href="#">
                 <span>Read More</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
           </div>
 
-          <div class="service-card">
-            <div class="card-icon-box">
-              <span>03</span>
-              <i class="fas fa-anchor"></i>
+          <div
+            class="service-card lg:flex-row bg-blue-950 p-8 flex flex-col gap-12 duration-300 w-full"
+          >
+            <div
+              class="card-icon-box flex justify-center items-center rounded-full relative bg-blue-800 p-8 w-40 aspect-square m-auto duration-700"
+            >
+              <span class="text-7xl text-blue-950">03</span>
+              <i
+                class="bg-white p-6 text-primary rounded-full text-3xl absolute top-[60%] left-[60%] w-max aspect-square fas fa-chart-line"
+              ></i>
             </div>
-            <div class="service-card-content">
-              <h3>Market Analysis</h3>
+            <div class="flex flex-col gap-4">
+              <h3 class="text-xl font-bold">Market Analysis</h3>
               <p>
                 nventore veritatis et quasi beata vitae dicta sunt explicabo.
                 Neenms ipsam voluptatem voluptas
               </p>
-              <a class="btn" href="#">
+              <a class="btn flex p-0 items-center" href="#">
                 <span>Read More</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
           </div>
 
-          <div class="service-card">
-            <div class="card-icon-box">
-              <span>04</span>
-              <i class="fas fa-laptop-code"></i>
+          <div
+            class="service-card lg:flex-row bg-blue-950 p-8 flex flex-col gap-12 duration-300 w-full"
+          >
+            <div
+              class="card-icon-box flex justify-center items-center rounded-full relative bg-blue-800 p-8 w-40 aspect-square m-auto duration-700"
+            >
+              <span class="text-7xl text-blue-950">04</span>
+              <i
+                class="bg-white p-6 text-primary rounded-full text-3xl absolute top-[60%] left-[60%] w-max aspect-square fas fa-chart-line"
+              ></i>
             </div>
-            <div class="service-card-content">
-              <h3>Market Analysis</h3>
+            <div class="flex flex-col gap-4">
+              <h3 class="text-xl font-bold">Market Analysis</h3>
               <p>
                 nventore veritatis et quasi beata vitae dicta sunt explicabo.
                 Neenms ipsam voluptatem voluptas
               </p>
-              <a class="btn" href="#">
+              <a class="btn flex p-0 items-center" href="#">
                 <span>Read More</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
@@ -333,16 +413,18 @@
     <!--==================================
     PORTFOLIO START
     ======================================-->
-    <section class="portfolio-section">
-      <div class="container">
+    <section class="portfolio-section py-24 relative w-full text-slate-800">
+      <div
+        class="container grid gap-8 md:grid-cols-2 lg:grid-cols-3 items-center"
+      >
         <div class="portfolio-title">
           <p class="section-title">Our Portfolio</p>
           <h2 class="section-heading">
             Advantage from but who has any right to find
           </h2>
         </div>
-        <div class="portfolio-btn">
-          <a href="#" class="btn btn-primary">
+        <div class="portfolio-btn flex gap-4 justify-end">
+          <a href="#" class="btn btn-primary text-white">
             <span>View More </span>
             <i class="fa-solid fa-arrow-right"></i>
           </a>
@@ -356,7 +438,11 @@
       <!-- Portfolio cards -->
       <div class="portfolio-cards">
         <div class="single-portfolio-card">
-          <img src="images/paint-2990357_640.jpg" alt="Creative Works" />
+          <img
+            class="w-full object-cover duration-300 h-[350px]"
+            src="images/paint-2990357_640.jpg"
+            alt="Creative Works"
+          />
 
           <!-- Sliding Content -->
           <div class="portfolio-sliding-content">
@@ -372,7 +458,11 @@
         </div>
 
         <div class="single-portfolio-card">
-          <img src="images/3.jpg" alt="Graphic Design" />
+          <img
+            class="w-full object-cover duration-300 h-[350px]"
+            src="images/3.jpg"
+            alt="Graphic Design"
+          />
 
           <!-- Sliding Content -->
           <div class="portfolio-sliding-content">
@@ -387,7 +477,11 @@
           </div>
         </div>
         <div class="single-portfolio-card">
-          <img src="images/computer-screen-6977452_640.jpg" alt="portfolio" />
+          <img
+            class="w-full object-cover duration-300 h-[350px]"
+            src="images/computer-screen-6977452_640.jpg"
+            alt="portfolio"
+          />
 
           <!-- Sliding Content -->
           <div class="portfolio-sliding-content">
@@ -402,7 +496,11 @@
           </div>
         </div>
         <div class="single-portfolio-card">
-          <img src="images/young-3210056_640.jpg" alt="Creative Works" />
+          <img
+            class="w-full object-cover duration-300 h-[350px]"
+            src="images/young-3210056_640.jpg"
+            alt="Creative Works"
+          />
 
           <!-- Sliding Content -->
           <div class="portfolio-sliding-content">
@@ -417,7 +515,11 @@
           </div>
         </div>
         <div class="single-portfolio-card">
-          <img src="images/laptop-1836990_640.jpg" alt="portfolio" />
+          <img
+            class="w-full object-cover duration-300 h-[350px]"
+            src="images/laptop-1836990_640.jpg"
+            alt="portfolio"
+          />
 
           <!-- Sliding Content -->
           <div class="portfolio-sliding-content">
@@ -434,15 +536,19 @@
       </div>
     </section>
 
-    <section class="project-section">
-      <div class="container">
-        <div class="project-content">
-          <h2>Have Any Creative Project!</h2>
+    <section class="project-section py-24 relative w-full text-white">
+      <div class="container relative">
+        <div class="project-content max-w-[35rem] flex flex-col gap-8">
+          <h2
+            class="text-3xl font-bold mb-4 capitalize leading-tight lg:text-6xl"
+          >
+            Have Any Creative Project!
+          </h2>
           <p>
             We denounce with righteous indignation and dislike men who are so
             beguiled and demoralized by the charms of pleasure
           </p>
-          <button class="btn btn-primary">
+          <button class="btn btn-primary max-w-max">
             <span>MEET WITH US</span>
             <i class="fa-solid fa-arrow-right"></i>
           </button>
@@ -453,9 +559,11 @@
     <!--==================================
     TEAM SECTION START
     ======================================-->
-    <section class="team-section">
+    <section class="py-24 relative w-full">
       <div class="container">
-        <div class="team-section-title">
+        <div
+          class="team-section-title flex flex-col items-center justify-center m-auto text-center max-w-[32rem]"
+        >
           <p class="section-title">Our Team Member</p>
           <h2 class="section-heading">
             Meet Our Most Creative Minds That's Are Professional
@@ -464,35 +572,50 @@
       </div>
 
       <!-- Team cards -->
-      <div class="container team-cards">
-        <div class="single-team-card">
+      <div class="container team-cards grid gap-8 mt-16 grid-cols-3">
+        <div
+          class="single-team-card overflow-hidden w-full flex flex-col gap-12 items-center"
+        >
           <img
             src="https://livvic-jekyll.tortoizthemes.com/assets/images/team/1.png"
             alt="team"
+            class="w-[inherit] aspect-square object-cover cursor-pointer p-4 border-4 border-dashed border-gray-500 rounded-full"
           />
-          <div class="team-info">
-            <h3>Rahul Gupta</h3>
-            <p>Web Developer</p>
+          <div class="team-info text-center text-slate-800">
+            <h3 class="text-2xl font-bold">Rahul Gupta</h3>
+            <p class="text-base font-semibold text-primary uppercase">
+              Web Developer
+            </p>
           </div>
         </div>
-        <div class="single-team-card">
+        <div
+          class="single-team-card overflow-hidden w-full flex flex-col gap-12 items-center"
+        >
           <img
             src="https://livvic-jekyll.tortoizthemes.com/assets/images/team/2.png"
             alt="team"
+            class="w-[inherit] aspect-square object-cover cursor-pointer p-4 border-4 border-dashed border-gray-500 rounded-full"
           />
-          <div class="team-info">
-            <h3>Sonali Rana</h3>
-            <p>UI/UX Designer</p>
+          <div class="team-info text-center text-slate-800">
+            <h3 class="text-2xl font-bold">Sonali Rana</h3>
+            <p class="text-base font-semibold text-primary uppercase">
+              UI/UX Designer
+            </p>
           </div>
         </div>
-        <div class="single-team-card">
+        <div
+          class="single-team-card overflow-hidden w-full flex flex-col gap-12 items-center"
+        >
           <img
             src="https://livvic-jekyll.tortoizthemes.com/assets/images/team/3.png"
             alt="team"
+            class="w-[inherit] aspect-square object-cover cursor-pointer p-4 border-4 border-dashed border-gray-500 rounded-full"
           />
-          <div class="team-info">
-            <h3>Ashish Pandey</h3>
-            <p>App Developer</p>
+          <div class="team-info text-center text-slate-800">
+            <h3 class="text-2xl font-bold">Ashish Pandey</h3>
+            <p class="text-base font-semibold text-primary uppercase">
+              App Developer
+            </p>
           </div>
         </div>
       </div>
@@ -501,16 +624,22 @@
     <!--==================================
     VIDEO SECTION START
     ======================================-->
-    <section class="video-section">
-      <div class="container">
-        <div class="video-play-btn">
+    <section class="video-section relative w-full h-full min-h-max mb-40">
+      <div
+        class="container grid gap-8 items-center min-h-max relative z-10 lg:grid-cols-2"
+      >
+        <div
+          class="video-play-btn flex justify-center items-center w-28 aspect-square bg-transparent rounded-full text-pink-700 text-4xl cursor-pointer border border-white my-16 mx-auto"
+        >
           <i class="fa-solid fa-play"></i>
         </div>
 
         <!-- CARD  -->
-        <div class="video-section-card">
-          <h2 class="section-heading">Watch Our Latest Videos</h2>
-          <p>
+        <div
+          class="flex flex-col gap-8 relative -bottom-40 bg-blue-950 p-8 max-w-[28rem] text-white py-12 text-4xl video-section-title"
+        >
+          <h2 class="section-heading text-white">Watch Our Latest Videos</h2>
+          <p class="text-base text-slate-300">
             Latin professor at Hampden-Sydney College in Virginia, looked up one
             of the more obscure Latin words, consectetur, from a Lorem Ipsum
             passage, and going through the cites of the
@@ -527,9 +656,9 @@
     <!--==================================
     COMPANY FACT START
     ======================================-->
-    <section class="company-fact-section">
+    <section class="py-24 relative w-full">
       <div class="container">
-        <div class="company-fact-top">
+        <div class="flex justify-between flex-wrap gap-8">
           <div class="company-fact-title">
             <p class="section-title">Company Fact</p>
             <h2 class="section-heading">Our Teams Achievement Journey</h2>
@@ -544,34 +673,45 @@
         </div>
 
         <!-- FACTS NUMBER -->
-        <div id="counters" class="counter-boxes">
-          <div class="counter-box">
-            <i class="fa-solid fa-rocket"></i>
-            <p>
+        <div
+          id="counters"
+          class="counter-boxes my-8 mx-0 grid text-slate-600 md:grid-cols-2 lg:grid-cols-4"
+        >
+          <div class="flex flex-col gap-8 p-8">
+            <i class="fa-solid fa-rocket text-5xl text-primary"></i>
+            <p
+              class="border-l-4 border-primary pl-8 flex flex-col text-gray-400"
+            >
               <span class="section-heading counter">364+</span>
               <span>Project Done</span>
             </p>
           </div>
 
-          <div class="counter-box">
-            <i class="fa-solid fa-bullseye"></i>
-            <p>
+          <div class="flex flex-col gap-8 p-8">
+            <i class="fa-solid fa-bullseye text-5xl text-primary"></i>
+            <p
+              class="border-l-4 border-primary pl-8 flex flex-col text-gray-400"
+            >
               <span class="section-heading counter">293+</span>
               <span>Satisfied Clients</span>
             </p>
           </div>
 
-          <div class="counter-box">
-            <i class="fa-solid fa-trophy"></i>
-            <p>
+          <div class="flex flex-col gap-8 p-8">
+            <i class="fa-solid fa-trophy text-5xl text-primary"></i>
+            <p
+              class="border-l-4 border-primary pl-8 flex flex-col text-gray-400"
+            >
               <span class="section-heading counter">34+</span>
               <span>Award Won</span>
             </p>
           </div>
 
-          <div class="counter-box">
-            <i class="fa-solid fa-people-group"></i>
-            <p>
+          <div class="flex flex-col gap-8 p-8">
+            <i class="fa-solid fa-people-group text-5xl text-primary"></i>
+            <p
+              class="border-l-4 border-primary pl-8 flex flex-col text-gray-400"
+            >
               <span class="section-heading counter">421+</span>
               <span>Expert Team Members</span>
             </p>
@@ -583,35 +723,36 @@
     <!--==================================
     TESTIMONIAL SECTION START
     ======================================-->
-    <section class="testimonial-section">
-      <div class="container">
+    <section class="w-full">
+      <div class="container grid gap-2 lg:grid-cols-2">
         <img
           src="https://livvic-jekyll.tortoizthemes.com/assets/images/testimonial/1.png"
           alt="testimonial"
+          class="w-[inherit] max-h-[34rem] object-contain pr-0 pb-2 lg:pb-0 lg:pr-8"
         />
 
-        <div class="testimonial-content">
-          <div class="testimonial-quote-icon">
-            <span class="line"></span>
+        <div class="flex flex-col justify-center gap-8">
+          <div class="text-5xl flex text-primary items-center gap-4">
+            <span class="block w-16 h-1 bg-primary"></span>
             <i class="fa-solid fa-quote-right"></i>
           </div>
-          <p>
+          <p class="text-xl font-semibold text-slate-700 lg:text-2xl">
             Avoids pleaser itself because pleas because those who do not know
             how to pursue pleasure rationally enoch que that are extrema painful
             again is there anyone who loves pursues or desires to obtain pain of
             itself.
           </p>
 
-          <div class="author-details">
-            <div class="avtar">
-              <img
-                src="https://livvic-jekyll.tortoizthemes.com/assets/images/testimonial/author.png"
-                alt="author"
-              />
-            </div>
-            <div class="author-info">
-              <h4>John Doe</h4>
-              <p>CEO, Apple Inc.</p>
+          <div class="flex gap-4 items-center">
+            <img
+              src="https://livvic-jekyll.tortoizthemes.com/assets/images/testimonial/author.png"
+              alt="author"
+            />
+            <div>
+              <h4 class="text-xl font-bold">John Doe</h4>
+              <p class="text-sm font-semibold text-primary uppercase">
+                CEO, Apple Inc.
+              </p>
             </div>
           </div>
         </div>
@@ -621,18 +762,23 @@
     <!--==================================
     PRICE SECTION START
     ======================================-->
-    <section class="pricing-section">
+    <section class="py-24 w-full">
       <div class="container">
-        <div class="pricing-titles">
+        <div class="flex flex-col items-center">
           <p class="section-title">Pricing Plan</p>
           <h2 class="section-heading">Choose Your Best Pricing Plan</h2>
         </div>
 
         <!-- Pricing cards -->
-        <div class="pricing-cards">
-          <div class="single-pricing-card">
-            <h2 class="plan-name">
-              <span>01</span>
+        <div class="pricing-cards grid gap-8 mt-16 lg:grid-cols-3">
+          <!-- card 1 -->
+          <div
+            class="single-pricing-card p-8 flex flex-col gap-8 duration-300 relative overflow-clip h-max text-slate-600 hover:bg-blue-700 hover:text-white"
+          >
+            <h2
+              class="plan-name text-base font-bold uppercase flex flex-col justify-center items-center leading-[0.9] bg-primary w-full pt-16 px-4 pb-8 text-white absolute origin-top-right rotate-45 left-36 top-28 duration-300 delay-100"
+            >
+              <span class="text-4xl font-bold">01</span>
               Basic
             </h2>
 
@@ -640,22 +786,43 @@
             <img
               src="https://livvic-jekyll.tortoizthemes.com/assets/images/price-icon.png"
               alt="basic-plan"
+              class="w-[inherit] max-w-24 mt-14"
             />
 
             <!-- Price -->
             <div class="plan-details">
-              <h3>$49 / Per Month</h3>
+              <h3
+                class="text-xl font-bold lowercase text-primary mb-8 duration-200"
+              >
+                $49 / Per Month
+              </h3>
 
-              <ul>
-                <li><i class="fas fa-arrow-right"></i> Design (UX/UI)</li>
-                <li><i class="fas fa-arrow-right"></i>Software Development</li>
-                <li><i class="fas fa-arrow-right"></i>Fashion Design (Arts)</li>
-                <li><i class="fas fa-arrow-right"></i> Development (php)</li>
+              <ul class="space-y-4">
+                <li class="flex gap-4 items-center">
+                  <i class="text-primary fas fa-arrow-right"></i> Design (UX/UI)
+                </li>
+                <li class="flex gap-4 items-center">
+                  <i class="text-primary fas fa-arrow-right"></i>Software
+                  Development
+                </li>
+                <li class="flex gap-4 items-center">
+                  <i class="text-primary fas fa-arrow-right"></i>Fashion Design
+                  (Arts)
+                </li>
+                <li class="flex gap-4 items-center">
+                  <i class="text-primary fas fa-arrow-right"></i> Development
+                  (php)
+                </li>
               </ul>
-              <ul class="hidden-details">
-                <li><i class="fas fa-arrow-right"></i>Game Design & DV</li>
-                <li>
-                  <i class="fas fa-arrow-right"></i>
+              <ul
+                class="hidden-details space-y-4 relative -mt-20 opacity-0 -z-10 duration-300"
+              >
+                <li class="flex gap-4 items-center mt-4">
+                  <i class="text-primary fas fa-arrow-right"></i>Game Design &
+                  DV
+                </li>
+                <li class="flex gap-4 items-center">
+                  <i class="text-primary fas fa-arrow-right"></i>
                   Computer Hardware
                 </li>
               </ul>
@@ -666,9 +833,15 @@
               </button>
             </div>
           </div>
-          <div class="single-pricing-card">
-            <h2 class="plan-name">
-              <span>01</span>
+
+          <!-- card 2 -->
+          <div
+            class="single-pricing-card p-8 flex flex-col gap-8 duration-300 relative overflow-clip h-max text-slate-600 hover:bg-blue-700 hover:text-white"
+          >
+            <h2
+              class="plan-name text-base font-bold uppercase flex flex-col justify-center items-center leading-[0.9] bg-primary w-full pt-16 px-4 pb-8 text-white absolute origin-top-right rotate-45 left-36 top-28 duration-300 delay-100"
+            >
+              <span class="text-4xl font-bold">01</span>
               Basic
             </h2>
 
@@ -676,22 +849,43 @@
             <img
               src="https://livvic-jekyll.tortoizthemes.com/assets/images/price-icon.png"
               alt="basic-plan"
+              class="w-[inherit] max-w-24 mt-14"
             />
 
             <!-- Price -->
             <div class="plan-details">
-              <h3>$49 / Per Month</h3>
+              <h3
+                class="text-xl font-bold lowercase text-primary mb-8 duration-200"
+              >
+                $49 / Per Month
+              </h3>
 
-              <ul>
-                <li><i class="fas fa-arrow-right"></i> Design (UX/UI)</li>
-                <li><i class="fas fa-arrow-right"></i>Software Development</li>
-                <li><i class="fas fa-arrow-right"></i>Fashion Design (Arts)</li>
-                <li><i class="fas fa-arrow-right"></i> Development (php)</li>
+              <ul class="space-y-4">
+                <li class="flex gap-4 items-center">
+                  <i class="text-primary fas fa-arrow-right"></i> Design (UX/UI)
+                </li>
+                <li class="flex gap-4 items-center">
+                  <i class="text-primary fas fa-arrow-right"></i>Software
+                  Development
+                </li>
+                <li class="flex gap-4 items-center">
+                  <i class="text-primary fas fa-arrow-right"></i>Fashion Design
+                  (Arts)
+                </li>
+                <li class="flex gap-4 items-center">
+                  <i class="text-primary fas fa-arrow-right"></i> Development
+                  (php)
+                </li>
               </ul>
-              <ul class="hidden-details">
-                <li><i class="fas fa-arrow-right"></i>Game Design & DV</li>
-                <li>
-                  <i class="fas fa-arrow-right"></i>
+              <ul
+                class="hidden-details space-y-4 relative -mt-20 opacity-0 -z-10 duration-300"
+              >
+                <li class="flex gap-4 items-center mt-4">
+                  <i class="text-primary fas fa-arrow-right"></i>Game Design &
+                  DV
+                </li>
+                <li class="flex gap-4 items-center">
+                  <i class="text-primary fas fa-arrow-right"></i>
                   Computer Hardware
                 </li>
               </ul>
@@ -702,9 +896,15 @@
               </button>
             </div>
           </div>
-          <div class="single-pricing-card">
-            <h2 class="plan-name">
-              <span>01</span>
+
+          <!-- card 3 -->
+          <div
+            class="single-pricing-card p-8 flex flex-col gap-8 duration-300 relative overflow-clip h-max text-slate-600 hover:bg-blue-700 hover:text-white"
+          >
+            <h2
+              class="plan-name text-base font-bold uppercase flex flex-col justify-center items-center leading-[0.9] bg-primary w-full pt-16 px-4 pb-8 text-white absolute origin-top-right rotate-45 left-36 top-28 duration-300 delay-100"
+            >
+              <span class="text-4xl font-bold">01</span>
               Basic
             </h2>
 
@@ -712,22 +912,43 @@
             <img
               src="https://livvic-jekyll.tortoizthemes.com/assets/images/price-icon.png"
               alt="basic-plan"
+              class="w-[inherit] max-w-24 mt-14"
             />
 
             <!-- Price -->
             <div class="plan-details">
-              <h3>$49 / Per Month</h3>
+              <h3
+                class="text-xl font-bold lowercase text-primary mb-8 duration-200"
+              >
+                $49 / Per Month
+              </h3>
 
-              <ul>
-                <li><i class="fas fa-arrow-right"></i> Design (UX/UI)</li>
-                <li><i class="fas fa-arrow-right"></i>Software Development</li>
-                <li><i class="fas fa-arrow-right"></i>Fashion Design (Arts)</li>
-                <li><i class="fas fa-arrow-right"></i> Development (php)</li>
+              <ul class="space-y-4">
+                <li class="flex gap-4 items-center">
+                  <i class="text-primary fas fa-arrow-right"></i> Design (UX/UI)
+                </li>
+                <li class="flex gap-4 items-center">
+                  <i class="text-primary fas fa-arrow-right"></i>Software
+                  Development
+                </li>
+                <li class="flex gap-4 items-center">
+                  <i class="text-primary fas fa-arrow-right"></i>Fashion Design
+                  (Arts)
+                </li>
+                <li class="flex gap-4 items-center">
+                  <i class="text-primary fas fa-arrow-right"></i> Development
+                  (php)
+                </li>
               </ul>
-              <ul class="hidden-details">
-                <li><i class="fas fa-arrow-right"></i>Game Design & DV</li>
-                <li>
-                  <i class="fas fa-arrow-right"></i>
+              <ul
+                class="hidden-details space-y-4 relative -mt-20 opacity-0 -z-10 duration-300"
+              >
+                <li class="flex gap-4 items-center mt-4">
+                  <i class="text-primary fas fa-arrow-right"></i>Game Design &
+                  DV
+                </li>
+                <li class="flex gap-4 items-center">
+                  <i class="text-primary fas fa-arrow-right"></i>
                   Computer Hardware
                 </li>
               </ul>
@@ -745,8 +966,8 @@
     <!--==================================
     NEWS and BLOG SECTION START
     ======================================-->
-    <section class="news-blog-section">
-      <div class="container top">
+    <section>
+      <div class="container flex flex-wrap gap-8 justify-between items-center">
         <div class="news-blog-titles">
           <p class="section-title">News & Blog</p>
           <h2 class="section-heading">Latest News & Blog Post</h2>
@@ -757,22 +978,28 @@
         </a>
       </div>
 
-      <div class="container blog-cards">
-        <div class="single-blog-card">
-          <div class="thumbnail">
+      <div class="container grid gap-8 mt-16 lg:grid-cols-3">
+        <div
+          class="single-blog-card flex flex-col duration-300 relative overflow-clip h-max text-slate-200 bg-blue-950 pb-8"
+        >
+          <div class="thumbnail w-full overflow-hidden h-max">
             <img
               src="https://livvic-jekyll.tortoizthemes.com/assets/images/blog/05.jpg"
               alt="thumbnail"
-              class="hover-scale-effect"
+              class="w-[inherit] aspect-[4/3] duration-300 ease-in-out hover:scale-110"
             />
           </div>
 
-          <div class="blog-content hover-scale-effect">
+          <div
+            class="blog-content duration-300 ease-in-out hover:scale-110 flex flex-col gap-4 items-start py-4 px-8 text-slate-300 font-semibold"
+          >
             <div class="blog-meta">
               <i class="fa-solid fa-calendar-days"></i>
               <span>May 20, 2021</span>
             </div>
-            <h3>How to Create a Successful Project Plan</h3>
+            <h3 class="text-xl text-white font-bold">
+              How to Create a Successful Project Plan
+            </h3>
             <a href="#" class="portfolio-btn">
               <span>Read More</span>
               <i class="fa-solid fa-arrow-right"></i>
@@ -780,21 +1007,27 @@
           </div>
         </div>
 
-        <div class="single-blog-card">
-          <div class="thumbnail">
+        <div
+          class="single-blog-card flex flex-col duration-300 relative overflow-clip h-max text-slate-400 bg-blue-950 pb-8"
+        >
+          <div class="thumbnail w-full overflow-hidden h-max">
             <img
               src="https://livvic-jekyll.tortoizthemes.com/assets/images/blog/05.jpg"
               alt="thumbnail"
-              class="hover-scale-effect"
+              class="w-[inherit] aspect-[4/3] duration-300 ease-in-out hover:scale-110"
             />
           </div>
 
-          <div class="blog-content hover-scale-effect">
+          <div
+            class="blog-content duration-300 ease-in-out hover:scale-110 flex flex-col gap-4 items-start py-4 px-8 text-slate-300 font-semibold"
+          >
             <div class="blog-meta">
               <i class="fa-solid fa-calendar-days"></i>
               <span>May 20, 2021</span>
             </div>
-            <h3>How to Create a Successful Project Plan</h3>
+            <h3 class="text-xl text-white font-bold">
+              How to Create a Successful Project Plan
+            </h3>
             <a href="#" class="portfolio-btn">
               <span>Read More</span>
               <i class="fa-solid fa-arrow-right"></i>
@@ -802,21 +1035,27 @@
           </div>
         </div>
 
-        <div class="single-blog-card">
-          <div class="thumbnail">
+        <div
+          class="single-blog-card flex flex-col duration-300 relative overflow-clip h-max text-slate-400 bg-blue-950 pb-8"
+        >
+          <div class="thumbnail w-full overflow-hidden h-max">
             <img
               src="https://livvic-jekyll.tortoizthemes.com/assets/images/blog/05.jpg"
               alt="thumbnail"
-              class="hover-scale-effect"
+              class="w-[inherit] aspect-[4/3] duration-300 ease-in-out hover:scale-110"
             />
           </div>
 
-          <div class="blog-content hover-scale-effect">
+          <div
+            class="blog-content duration-300 ease-in-out hover:scale-110 flex flex-col gap-4 items-start py-4 px-8 text-slate-300 font-semibold"
+          >
             <div class="blog-meta">
               <i class="fa-solid fa-calendar-days"></i>
               <span>May 20, 2021</span>
             </div>
-            <h3>How to Create a Successful Project Plan</h3>
+            <h3 class="text-xl text-white font-bold">
+              How to Create a Successful Project Plan
+            </h3>
             <a href="#" class="portfolio-btn">
               <span>Read More</span>
               <i class="fa-solid fa-arrow-right"></i>
@@ -829,97 +1068,127 @@
     <!--==================================
     CONTACT SECTION START
     ======================================-->
-    <footer>
+    <footer class="w-full relative mt-24 pt-24">
       <div class="container">
         <div class="bg-heading">
           <p class="section-title">Message Us</p>
-          <h2 class="section-heading">
+          <h2 class="section-heading max-w-lg">
             Some advantage from but who has any right to
           </h2>
         </div>
 
-        <form class="footer-contact-us-form" action="">
-          <div>
+        <form class="footer-contact-us-form grid my-16" action="">
+          <div
+            class="border-2 border-blue-700 py-6 px-8 text-white flex gap-2 items-center w-full hover:border-white"
+          >
             <input
-              class="input-box"
+              class="flex-1 bg-transparent outline-none border-none text-white text-xl placeholder:capitalize placeholder:font-bold placeholder:text-white"
               type="text"
               name="name"
               id=""
               placeholder="Your Name"
+              class="flex-1"
             />
-            <i class="fa-regular fa-user"></i>
+            <i class="fa-regular fa-user max-w-max text-xl"></i>
           </div>
-          <div>
+          <div
+            class="border-2 border-blue-700 py-6 px-8 text-white flex gap-2 items-center w-full hover:border-white"
+          >
             <input
-              class="input-box"
+              class="flex-1 bg-transparent outline-none border-none text-white text-xl placeholder:capitalize placeholder:font-bold placeholder:text-white"
               type="email"
               name="email"
               id=""
               placeholder="Your Email"
             />
-            <i class="fa-solid fa-envelope-open-text"></i>
+            <i class="fa-solid fa-envelope-open-text text-xl"></i>
           </div>
-          <div>
+          <div
+            class="border-2 border-blue-700 py-6 px-8 text-white flex gap-2 items-center w-full hover:border-white"
+          >
             <input
-              class="input-box"
+              class="flex-1 bg-transparent outline-none border-none text-white text-xl placeholder:capitalize placeholder:font-bold placeholder:text-white"
               type="email"
               name="email"
               id=""
               placeholder="Your Mobile"
             />
-            <i class="fa-solid fa-phone-flip"></i>
+            <i class="fa-solid fa-phone-flip text-xl"></i>
           </div>
-          <div class="textarea-box input-box">
+          <div
+            class="lg:col-span-3 border-2 border-blue-700 py-6 px-8 text-white flex gap-2 items-start w-full hover:border-white"
+          >
             <textarea
-              class="input-box"
+              class="flex-1 bg-transparent outline-none border-none text-white text-xl placeholder:capitalize placeholder:font-bold placeholder:text-white resize-none"
               name="message"
               id=""
               rows="10"
               placeholder="Your Message"
             ></textarea>
-            <i class="fa-solid fa-pen"></i>
+            <i class="fa-solid fa-pen text-xl"></i>
           </div>
-          <button class="btn btn-primary" type="submit">
+
+          <button class="btn btn-primary my-8 mx-auto w-max" type="submit">
             <span>Send Message</span>
             <i class="fa-solid fa-arrow-right"></i>
           </button>
         </form>
 
         <!-- Contact Info -->
-        <div class="footer-contact-info">
-          <a class="contact-method" href="tel:+919876543210">
-            <i class="fas fa-arrow-right"></i>
+        <div class="footer-contact-info flex gap-8 justify-between flex-wrap">
+          <a class="text-white text-xl font-semibold" href="tel:+919876543210">
+            <i class="fas fa-arrow-right bg-primary p-4 rounded-lg mr-4"></i>
             <span>+91 9876543210</span>
           </a>
 
-          <a class="contact-method" href="mailto:conatact@example.com">
-            <i class="fas fa-arrow-right"></i>
+          <a
+            class="text-white text-xl font-semibold"
+            href="mailto:conatact@example.com"
+          >
+            <i class="fas fa-arrow-right bg-primary p-4 rounded-lg mr-4"></i>
             <span>contact@example.com</span>
           </a>
 
-          <p class="contact-method" href="mailto:conatact@example.com">
-            <i class="fas fa-arrow-right"></i>
+          <p
+            class="text-white text-xl font-semibold"
+            href="mailto:conatact@example.com"
+          >
+            <i class="fas fa-arrow-right bg-primary p-4 rounded-lg mr-4"></i>
             <span>contact@example.com</span>
           </p>
         </div>
       </div>
 
-      <div class="footer-info">
-        <div class="container">
+      <div class="footer-info border-t border-blue-700 mt-8 py-8">
+        <div
+          class="container flex flex-wrap-reverse justify-center text-white items-center gap-8"
+        >
           <div>
             <p>&copy; 2022 Livvic. All Rights Reserved</p>
           </div>
-          <div class="footer-social-icons">
-            <a href="https://facebook.com">
+          <div class="footer-social-icons flex gap-4">
+            <a
+              href="https://facebook.com"
+              class="bg-blue-950 rounded-full aspect-square flex items-center justify-center duration-300 w-12 h-12 hover:bg-primary"
+            >
               <i class="fa-brands fa-facebook-f"></i>
             </a>
-            <a href="https://facebook.com">
+            <a
+              href="https://facebook.com"
+              class="bg-blue-950 rounded-full aspect-square flex items-center justify-center duration-300 w-12 h-12 hover:bg-primary"
+            >
               <i class="fa-brands fa-x-twitter"></i>
             </a>
-            <a href="https://facebook.com">
+            <a
+              href="https://facebook.com"
+              class="bg-blue-950 rounded-full aspect-square flex items-center justify-center duration-300 w-12 h-12 hover:bg-primary"
+            >
               <i class="fa-brands fa-discord"></i>
             </a>
-            <a href="https://facebook.com">
+            <a
+              href="https://facebook.com"
+              class="bg-blue-950 rounded-full aspect-square flex items-center justify-center duration-300 w-12 h-12 hover:bg-primary"
+            >
               <i class="fa-brands fa-instagram"></i>
             </a>
           </div>
