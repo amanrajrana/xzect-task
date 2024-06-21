@@ -3,31 +3,187 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* color variables  */
+  --primary-color-rgb: 242, 108, 79;
+  --bg-color-rgb: 0, 32, 60;
+  --border-color-rgb: 36, 91, 139;
+  --card-background-rgb: 24, 47, 93;
+
+  --primary-color: rgb(var(--primary-color-rgb));
+  --bg-dark-color: rgb(var(--bg-color-rgb));
+  --border-color: rgb(var(--border-color-rgb));
+  --card-background: rgb(var(--card-background-rgb));
+
+  /* background image color */
+  --bg-color-opacity: 0.9;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/*----------------------------------------
+   01. CUSTOM UTILITY CLASSES
+----------------------------------------*/
+
+.btn {
+  display: flex;
+  column-gap: 0.25rem;
+  padding: 1.75rem 2.5rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 9999px;
+  cursor: pointer;
+  letter-spacing: 0.25rem;
+  align-items: center;
+  transition-duration: 300ms;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.btn-primary {
+  text-transform: uppercase;
+  background-color: var(--primary-color);
+  color: #f4f4f5;
+}
+
+.btn-primary:hover {
+  background-color: rgb(var(--primary-color-rgb), 0.99);
+}
+
+.btn:hover {
+  column-gap: 0.75rem;
+}
+
+.bg-heading {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.bg-heading h2 {
+  color: #f4f4f5;
+}
+
+.bg-heading::before {
+  content: "";
+  position: absolute;
+  font-size: 4rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.1);
+  z-index: -1;
+  font-family: "Dancing Script", cursive;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+  .btn {
+    padding: 0.75rem 1.5rem;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Tablet styles */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+/* Desktop styles */
+@media only screen and (min-width: 1025px) {
+  .section-title {
+    padding-left: 1.5rem;
+  }
+
+  .section-heading {
+    font-size: 2.25rem;
+  }
+
+  .bg-heading::before {
+    font-size: 5rem;
+  }
+}
+
+/*----------------------------------------
+   06. SERVICES css
+----------------------------------------*/
+.service-card:hover .card-icon-box {
+  background: var(--primary-color);
+}
+
+.project-section .container::before {
+  content: "projects";
+  position: absolute;
+  font-size: 4rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.1);
+  z-index: -1;
+  font-family: "Dancing Script", cursive;
+}
+
+/*----------------------------------------
+   09. VIDEO SECTION css
+----------------------------------------*/
+
+.video-play-btn {
+  animation: shadow-pulse 2s infinite;
+}
+
+.video-play-btn:hover {
+  animation-play-state: paused;
+}
+
+@keyframes shadow-pulse {
+  0% {
+    box-shadow: 0 0 0px 0px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.video-section-title::before {
+  content: "video";
+  position: absolute;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.1);
+  z-index: +1;
+  font-family: "Dancing Script", cursive;
+}
+
+/*----------------------------------------
+   11. PRICING SECTION css
+----------------------------------------*/
+.single-pricing-card:hover .plan-name {
+  background-color: #07017a;
+}
+
+.single-pricing-card:hover .plan-details h3 {
+  color: #f4f4f5;
+}
+
+.single-pricing-card:hover .hidden-details {
+  margin-top: 0;
+  opacity: 1;
+  z-index: 0;
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1025px) {
+  .portfolio-section .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .project-section .container::before {
+    font-size: 8rem;
+  }
+
+  .video-section-title::before {
+    font-size: 6rem;
   }
 }
